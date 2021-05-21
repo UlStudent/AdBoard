@@ -141,7 +141,7 @@ namespace BoardView
             this.Controls.Add(this.textBoxLogin);
             this.Controls.Add(this.textBoxUsername);
             this.Name = "FormUser";
-            this.Text = "FormUser";
+            this.Text = "Добавить пользователя";
             this.ResumeLayout(false);
             this.PerformLayout();
 

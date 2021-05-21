@@ -162,6 +162,60 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAd.Designer.cs">
+      <DependentUpon>FormAd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAds.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAds.Designer.cs">
+      <DependentUpon>FormAds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBalances.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBalances.Designer.cs">
+      <DependentUpon>FormBalances.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBalance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBalance.Designer.cs">
+      <DependentUpon>FormBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFavorite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFavorite.Designer.cs">
+      <DependentUpon>FormFavorite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFavorites.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFavorites.Designer.cs">
+      <DependentUpon>FormFavorites.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMessage.Designer.cs">
+      <DependentUpon>FormMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMessages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMessages.Designer.cs">
+      <DependentUpon>FormMessages.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,13 +228,49 @@
     <Compile Include="FormUsers.Designer.cs">
       <DependentUpon>FormUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormReq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReq.Designer.cs">
+      <DependentUpon>FormReq.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAd.resx">
+      <DependentUpon>FormAd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAds.resx">
+      <DependentUpon>FormAds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBalance.resx">
+      <DependentUpon>FormBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBalances.resx">
+      <DependentUpon>FormBalances.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFavorite.resx">
+      <DependentUpon>FormFavorite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFavorites.resx">
+      <DependentUpon>FormFavorites.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMessage.resx">
+      <DependentUpon>FormMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMessages.resx">
+      <DependentUpon>FormMessages.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormUser.resx">
       <DependentUpon>FormUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUsers.resx">
       <DependentUpon>FormUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReq.resx">
+      <DependentUpon>FormReq.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

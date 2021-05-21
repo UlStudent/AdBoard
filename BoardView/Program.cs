@@ -7,6 +7,7 @@ using BoardBusinessLogic.Interfaces;
 using BoardImplement.Implements;
 using BoardBusinessLogic.BusinessLogic;
 using Unity.Lifetime;
+using BoardDatabaseImplement.Implements;
 
 namespace BoardView
 {
@@ -21,15 +22,21 @@ namespace BoardView
             var container = BuildUnityContainer();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(container.Resolve<FormUsers>());
+            Application.Run(container.Resolve<FormMain>());
         }
         private static IUnityContainer BuildUnityContainer()
         {
             var currentContainer = new UnityContainer();
+            currentContainer.RegisterType<IAdStorage, AdStorage>(new HierarchicalLifetimeManager());
             currentContainer.RegisterType<IUsersStorage, UsersStorage>(new HierarchicalLifetimeManager());
-            //currentContainer.RegisterType<IOrderStorage, OrderStorage>(new HierarchicalLifetimeManager());
+            currentContainer.RegisterType<IFavoritesStorage, FavoritesStorage>(new HierarchicalLifetimeManager());
+            currentContainer.RegisterType<IBalanceStorage, BalanceStorage>(new HierarchicalLifetimeManager());
+            currentContainer.RegisterType<IMessagesStorage, MessagesStorage>(new HierarchicalLifetimeManager());
+            currentContainer.RegisterType<AdLogic>(new HierarchicalLifetimeManager());
             currentContainer.RegisterType<UsersLogic>(new HierarchicalLifetimeManager());
-            // currentContainer.RegisterType<MailLogic>(new HierarchicalLifetimeManager());
+            currentContainer.RegisterType<BalanceLogic>(new HierarchicalLifetimeManager());
+            currentContainer.RegisterType<FavoritesLogic>(new HierarchicalLifetimeManager());
+            currentContainer.RegisterType<MessagesLogic>(new HierarchicalLifetimeManager());
             return currentContainer;
         }
 
