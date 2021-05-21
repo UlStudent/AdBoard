@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoardBusinessLogic", "Board
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoardDatabaseImplement", "BoardDatabaseImplement\BoardDatabaseImplement.csproj", "{B0A63B19-8E45-4404-8CB3-19ED4DF83001}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoardView", "BoardView\BoardView.csproj", "{F5EED1D2-E406-4A7A-BE15-AAF0A459E7B3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoardView", "BoardView\BoardView.csproj", "{F5EED1D2-E406-4A7A-BE15-AAF0A459E7B4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
