@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BoardBusinessLogic.BindingModels
 {
-    public class MessageBindingModel
+    public class MessagesBindingModel
     {
         public int? Id { get; set; }
         public string Text { get; set; }

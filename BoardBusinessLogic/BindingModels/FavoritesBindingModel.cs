@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BoardBusinessLogic.BindingModels
 {
-    public class FavoriteBindingModel
+    public class FavoritesBindingModel
     {
         public int? Id { get; set; }
         public string AdName { get; set; }

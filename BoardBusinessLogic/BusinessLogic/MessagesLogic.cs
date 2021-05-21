@@ -7,16 +7,16 @@ using System.Text;
 
 namespace BoardBusinessLogic.BusinessLogic
 {
-    public class MessageLogic
+    public class MessagesLogic
     {
-        private readonly IMessageStorage _messageStorage;
+        private readonly IMessagesStorage _messageStorage;
 
-        public MessageLogic(IMessageStorage messageStorage)
+        public MessagesLogic(IMessagesStorage messageStorage)
         {
             _messageStorage = messageStorage;
         }
 
-        public List<MessageViewModel> Read(MessageBindingModel model)
+        public List<MessagesViewModel> Read(MessagesBindingModel model)
         {
             if (model == null)
             {
@@ -24,12 +24,12 @@ namespace BoardBusinessLogic.BusinessLogic
             }
             if (model.Id.HasValue)
             {
-                return new List<MessageViewModel> { _messageStorage.GetElement(model) };
+                return new List<MessagesViewModel> { _messageStorage.GetElement(model) };
             }
             return _messageStorage.GetFilteredList(model);
         }
 
-        public void CreateOrUpdate(MessageBindingModel model)
+        public void CreateOrUpdate(MessagesBindingModel model)
         {
             if (model.Id.HasValue)
             {
@@ -40,9 +40,9 @@ namespace BoardBusinessLogic.BusinessLogic
                 _messageStorage.Insert(model);
             }
         }
-        public void Delete(MessageBindingModel model)
+        public void Delete(MessagesBindingModel model)
         {
-            var element = _messageStorage.GetElement(new MessageBindingModel
+            var element = _messageStorage.GetElement(new MessagesBindingModel
             {
                 Id = model.Id
             });

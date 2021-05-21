@@ -12,7 +12,7 @@ namespace BoardDatabaseImplement
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseNpgsql("Host=192.168.1.72;Database=taskManager;Username=postgres;Password=123456");
+                optionsBuilder.UseNpgsql("Host=192.168.0.1;Database=db_board;Username=postgres;Password=12345678");
             }
         }
         public virtual DbSet<Users> Users { get; set; }

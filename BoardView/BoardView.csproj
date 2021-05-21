@@ -154,10 +154,34 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Unity.Abstractions, Version=5.11.7.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.11.10\lib\net47\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Container, Version=5.11.11.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.11.10\lib\net47\Unity.Container.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUser.Designer.cs">
+      <DependentUpon>FormUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUsers.Designer.cs">
+      <DependentUpon>FormUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormUser.resx">
+      <DependentUpon>FormUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUsers.resx">
+      <DependentUpon>FormUsers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

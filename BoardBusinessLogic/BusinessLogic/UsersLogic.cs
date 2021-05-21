@@ -7,16 +7,16 @@ using System.Text;
 
 namespace BoardBusinessLogic.BusinessLogic
 {
-    public class UserLogic
+    public class UsersLogic
     {
-        private readonly IUserStorage _userStorage;
+        private readonly IUsersStorage _userStorage;
 
-        public UserLogic(IUserStorage clientStorage)
+        public UsersLogic(IUsersStorage clientStorage)
         {
             _userStorage = clientStorage;
         }
 
-        public List<UserViewModel> Read(UserBindingModel model)
+        public List<UsersViewModel> Read(UsersBindingModel model)
         {
             if (model == null)
             {
@@ -24,14 +24,14 @@ namespace BoardBusinessLogic.BusinessLogic
             }
             if (model.Id.HasValue)
             {
-                return new List<UserViewModel> { _userStorage.GetElement(model) };
+                return new List<UsersViewModel> { _userStorage.GetElement(model) };
             }
             return _userStorage.GetFilteredList(model);
         }
 
-        public void CreateOrUpdate(UserBindingModel model)
+        public void CreateOrUpdate(UsersBindingModel model)
         {
-            var element = _userStorage.GetElement(new UserBindingModel
+            var element = _userStorage.GetElement(new UsersBindingModel
             {
                 Login = model.Login
             });
@@ -48,9 +48,9 @@ namespace BoardBusinessLogic.BusinessLogic
                 _userStorage.Insert(model);
             }
         }
-        public void Delete(UserBindingModel model)
+        public void Delete(UsersBindingModel model)
         {
-            var element = _userStorage.GetElement(new UserBindingModel
+            var element = _userStorage.GetElement(new UsersBindingModel
             {
                 Id = model.Id
             });

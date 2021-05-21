@@ -5,15 +5,16 @@ using System.Text;
 
 namespace BoardBusinessLogic.ViewModels
 {
-    public class MessageViewModel
+    public class FavoritesViewModel
     {
         public int Id { get; set; }
-        [DisplayName("Текст сообщения")]
-        public string Text { get; set; }
-        [DisplayName("Дата отправки")]
-        public DateTime Date { get; set; }
+        [DisplayName("Название объявления")]
+        public string AdName { get; set; }
+        [DisplayName("Ссылка на объявление")]
+        public string Link { get; set; }
         public int UserId { get; set; }
         [DisplayName("Имя пользователя")]
         public string Username { get; set; }
     }
 }
+ 

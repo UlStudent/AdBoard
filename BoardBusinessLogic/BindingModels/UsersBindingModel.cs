@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BoardBusinessLogic.BindingModels
 {
-    public class UserBindingModel
+    public class UsersBindingModel
     {
         public int? Id { get; set; }
         public string Username { get; set; }

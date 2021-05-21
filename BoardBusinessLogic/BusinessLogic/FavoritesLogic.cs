@@ -7,16 +7,16 @@ using System.Text;
 
 namespace BoardBusinessLogic.BusinessLogic
 {
-    public class FavoriteLogic
+    public class FavoritesLogic
     {
-        private readonly IFavoriteStorage _favoriteStorage;
+        private readonly IFavoritesStorage _favoriteStorage;
 
-        public FavoriteLogic(IFavoriteStorage favoriteStorage)
+        public FavoritesLogic(IFavoritesStorage favoriteStorage)
         {
             _favoriteStorage = favoriteStorage;
         }
 
-        public List<FavoriteViewModel> Read(FavoriteBindingModel model)
+        public List<FavoritesViewModel> Read(FavoritesBindingModel model)
         {
             if (model == null)
             {
@@ -24,14 +24,14 @@ namespace BoardBusinessLogic.BusinessLogic
             }
             if (model.Id.HasValue)
             {
-                return new List<FavoriteViewModel> { _favoriteStorage.GetElement(model) };
+                return new List<FavoritesViewModel> { _favoriteStorage.GetElement(model) };
             }
             return _favoriteStorage.GetFilteredList(model);
         }
 
-        public void CreateOrUpdate(FavoriteBindingModel model)
+        public void CreateOrUpdate(FavoritesBindingModel model)
         {
-            var element = _favoriteStorage.GetElement(new FavoriteBindingModel
+            var element = _favoriteStorage.GetElement(new FavoritesBindingModel
             {
                 Link = model.Link
             });
@@ -48,9 +48,9 @@ namespace BoardBusinessLogic.BusinessLogic
                 _favoriteStorage.Insert(model);
             }
         }
-        public void Delete(FavoriteBindingModel model)
+        public void Delete(FavoritesBindingModel model)
         {
-            var element = _favoriteStorage.GetElement(new FavoriteBindingModel
+            var element = _favoriteStorage.GetElement(new FavoritesBindingModel
             {
                 Id = model.Id
             });

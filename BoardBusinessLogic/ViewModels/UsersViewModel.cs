@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BoardBusinessLogic.ViewModels
 {
-    public class UserViewModel
+    public class UsersViewModel
     {
         public int Id { get; set; }
         [DisplayName("Имя")]
