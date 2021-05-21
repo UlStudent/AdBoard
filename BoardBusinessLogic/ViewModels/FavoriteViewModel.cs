@@ -5,9 +5,9 @@ using System.Text;
 
 namespace BoardBusinessLogic.ViewModels
 {
-    public class FavoritesViewModel
+    public class FavoriteViewModel
     {
-        public int? Id { get; set; }
+        public int Id { get; set; }
         [DisplayName("Название объявления")]
         public string AdName { get; set; }
         [DisplayName("Ссылка на объявление")]

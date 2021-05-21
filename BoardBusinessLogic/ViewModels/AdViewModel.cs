@@ -7,7 +7,7 @@ namespace BoardBusinessLogic.ViewModels
 {
     public class AdViewModel
     {
-        private int? Id { get; set; }
+        public int Id { get; set; }
         [DisplayName("Название  ")]
         public string Name { get; set; }
         [DisplayName("Цена")]
